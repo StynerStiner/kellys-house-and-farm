@@ -156,6 +156,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
                       src={src}
                       alt=""
                       fill
+                      preload={index === 0}
                       style={{
                         width: "100%",
                         objectFit: "cover",
