@@ -91,7 +91,7 @@ export default function WorksSection({ data }: WorksSectionProps) {
 						</Swiper>
 
 						{/* Custom Arrows */}
-						<div className="cs_slider_arrows cs_style_3 cs_hide_lg">
+						<div className="cs_slider_arrows cs_style_3">
 							<div
 								className="cs_right_arrow cs_heading_color cs_fs_20 cs_center cs_next_btn_arrow"
 								style={{}}
