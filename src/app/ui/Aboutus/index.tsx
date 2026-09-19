@@ -76,7 +76,7 @@ export default function AboutUsSection({ data }: AboutUsSectionProps) {
 					</div>
 					<div className="col-lg-4">
 						<p
-							className="cs_fs_20 mb-0"
+							className="cs_fs_20 cs_drop_cap mb-0"
 							dangerouslySetInnerHTML={{ __html: data.introduction }}
 						></p>
 					</div>

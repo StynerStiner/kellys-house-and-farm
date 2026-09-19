@@ -679,6 +679,28 @@ hr {
 		}
 	}
 }
+// Large first letter that opens a story paragraph. A serif face so a
+// letter like "I" still reads as a letter, not a bar. initial-letter
+// lines it up with the text; older browsers fall back to a float.
+.cs_drop_cap::first-letter {
+	float: left;
+	margin: 0.04em 0.12em 0 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 3.6em;
+	font-weight: 700;
+	line-height: 0.8;
+	color: var(--heading-color);
+}
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+	.cs_drop_cap::first-letter {
+		float: none;
+		margin: 0 0.5em 0 0;
+		font-size: inherit;
+		line-height: inherit;
+		-webkit-initial-letter: 3;
+		initial-letter: 3;
+	}
+}
 .cs_section_heading.cs_style_5 {
 	.cs_section_title {
 		span {
