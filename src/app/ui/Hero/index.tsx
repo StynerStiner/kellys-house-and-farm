@@ -10,9 +10,10 @@
 import { HeroDataProps } from "@/app/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperInstance } from "swiper/types";
 
 interface HeroSectionProps {
   data: HeroDataProps;
@@ -20,6 +21,16 @@ interface HeroSectionProps {
 
 export default function HeroSection({ data }: HeroSectionProps) {
   const [currentSlide, setCurrentSlide] = useState<number>(1);
+  const [paused, setPaused] = useState<boolean>(false);
+  const swiperRef = useRef<SwiperInstance | null>(null);
+
+  const togglePause = () => {
+    const autoplay = swiperRef.current?.autoplay;
+    if (!autoplay) return;
+    if (paused) autoplay.start();
+    else autoplay.stop();
+    setPaused(!paused);
+  };
 
   return (
     <>
@@ -145,6 +156,9 @@ export default function HeroSection({ data }: HeroSectionProps) {
                           </li>`;
                 },
               }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
               onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
               className="cs_slider_wrapper"
             >
@@ -203,6 +217,52 @@ export default function HeroSection({ data }: HeroSectionProps) {
                     }}
                   >
                     <ul className="cs_pagination_1_list" />
+                  </div>
+                  <div className="cs_hero_controls">
+                    <button
+                      type="button"
+                      className="cs_hero_control"
+                      aria-label="Previous photo"
+                      onClick={() => swiperRef.current?.slidePrev()}
+                    >
+                      <svg width={10} height={18} viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                        <path
+                          d="M0.499953 9.00005C0.499953 8.80823 0.573265 8.61623 0.719703 8.4698L8.2197 0.969797C8.51277 0.676734 8.98733 0.676734 9.2802 0.969797C9.57308 1.26286 9.57327 1.73742 9.2802 2.0303L2.31045 9.00005L9.2802 15.9698C9.57327 16.2629 9.57327 16.7374 9.2802 17.0303C8.98714 17.3232 8.51258 17.3234 8.2197 17.0303L0.719703 9.5303C0.573265 9.38386 0.499953 9.19186 0.499953 9.00005Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      className="cs_hero_control"
+                      aria-label={paused ? "Play slideshow" : "Pause slideshow"}
+                      aria-pressed={paused}
+                      onClick={togglePause}
+                    >
+                      {paused ? (
+                        <svg width={12} height={14} viewBox="0 0 19 22" fill="none" aria-hidden="true">
+                          <path d="M18.5 11L0.5 21.3923V0.607696L18.5 11Z" fill="currentColor" />
+                        </svg>
+                      ) : (
+                        <svg width={12} height={14} viewBox="0 0 12 14" fill="none" aria-hidden="true">
+                          <rect x={1} width={3.5} height={14} rx={1} fill="currentColor" />
+                          <rect x={7.5} width={3.5} height={14} rx={1} fill="currentColor" />
+                        </svg>
+                      )}
+                    </button>
+                    <button
+                      type="button"
+                      className="cs_hero_control"
+                      aria-label="Next photo"
+                      onClick={() => swiperRef.current?.slideNext()}
+                    >
+                      <svg width={10} height={18} viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                        <path
+                          d="M9.50005 8.99995C9.50005 9.19177 9.42673 9.38377 9.2803 9.5302L1.7803 17.0302C1.48723 17.3233 1.01267 17.3233 0.719797 17.0302C0.426922 16.7371 0.426734 16.2626 0.719797 15.9697L7.68955 8.99995L0.719797 2.0302C0.426734 1.73714 0.426734 1.26258 0.719797 0.969702C1.01286 0.676826 1.48742 0.67664 1.7803 0.969702L9.2803 8.4697C9.42673 8.61614 9.50005 8.80814 9.50005 8.99995Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>

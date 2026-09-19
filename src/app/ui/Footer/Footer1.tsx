@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import parser from "html-react-parser";
 import FooterForm from "../Forms/FooterForm";
+import GiveOptions, { GiveOption } from "./GiveOptions";
 
 const data: FooterDataProps = {
 	logo: "/assets/img/footer_logo.svg",
@@ -33,19 +34,18 @@ const data: FooterDataProps = {
 				{ label: "FROM THE HARVEST", url: "/#harvest" },
 			],
 		},
-		{
-			title: "SUPPORT",
-			links: [
-				{
-					label: "GIVE VIA VENMO",
-					url: "https://account.venmo.com/u/Lekeisha-Simpson",
-				},
-			],
-		},
 	],
 	copyright: "© 2026 KELLY’S HOUSE AND FARM. ALL RIGHTS RESERVED.",
 	bottomLinks: [],
 };
+
+// The SUPPORT column's pill buttons. Fill in PayPal's link
+// (https://paypal.me/…) and the Zelle email or phone when we have them.
+const giveOptions: GiveOption[] = [
+	{ label: "Venmo", url: "https://account.venmo.com/u/Lekeisha-Simpson" },
+	{ label: "PayPal", url: "" },
+	{ label: "Zelle", copy: "" },
+];
 
 export default function Footer1() {
 	return (
@@ -85,6 +85,13 @@ export default function Footer1() {
 							</div>
 						</div>
 					))}
+
+					<div className="cs_footer_col">
+						<div className="cs_footer_widget">
+							<h4 className="cs_footer_widget_title">SUPPORT</h4>
+							<GiveOptions options={giveOptions} />
+						</div>
+					</div>
 				</div>
 
 				<div className="cs_bottom_footer">

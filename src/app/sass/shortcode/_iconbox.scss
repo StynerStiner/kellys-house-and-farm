@@ -10,7 +10,14 @@
   11. Iconbox
 ----------------------------------------------------------------*/
 .cs_iconbox.cs_style_1 {
+  // Icon and title share a row; the text runs full width below.
+  .cs_iconbox_head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
   .cs_iconbox_icon {
+    flex: none;
     height: 48px;
     width: 48px;
     position: relative;

@@ -122,19 +122,21 @@ export default function AboutUsSection({ data }: AboutUsSectionProps) {
 						handelClose={handelClose}
 					/>
 
-					<div className="col-lg-8 t" data-aos="fade-left">
-						<div
-							className="cs_cta cs_style_2 cs_bg_filed cs_radius_20"
-							style={{ backgroundImage: `url(${data.cta.backgroundImage})` }}
-						>
-							<Link
-								href={data.cta.buttonUrl}
-								className="cs_btn cs_style_2 cs_bold cs_white_color"
+					{data.cta && (
+						<div className="col-lg-8 t" data-aos="fade-left">
+							<div
+								className="cs_cta cs_style_2 cs_bg_filed cs_radius_20"
+								style={{ backgroundImage: `url(${data.cta.backgroundImage})` }}
 							>
-								{data.cta.buttonText}
-							</Link>
+								<Link
+									href={data.cta.buttonUrl}
+									className="cs_btn cs_style_2 cs_bold cs_white_color"
+								>
+									{data.cta.buttonText}
+								</Link>
+							</div>
 						</div>
-					</div>
+					)}
 				</div>
 			</div>
 			<div className="cs_height_100 cs_height_lg_70" />

@@ -144,6 +144,41 @@
   }
 }
 
+// Let swipes and drags on the hero text reach the photo slider underneath;
+// links and buttons stay clickable.
+.cs_hero.cs_style_1 > .container {
+  pointer-events: none;
+  a,
+  button {
+    pointer-events: auto;
+  }
+}
+
+// Back / pause-play / next buttons under the slide counter.
+.cs_hero_controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.cs_hero_control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(249 251 243 / 60%);
+  border-radius: 50%;
+  background-color: rgb(249 251 243 / 12%);
+  backdrop-filter: blur(4px);
+  color: var(--white-color);
+  transition: background-color 0.3s ease;
+  &:hover,
+  &:focus-visible {
+    background-color: rgb(249 251 243 / 28%);
+  }
+}
+
 // Real photos need a scrim for the white headline (template green, no new colors).
 .cs_hero.cs_style_1 .cs_hero_bg::after {
   content: "";

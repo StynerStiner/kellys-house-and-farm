@@ -124,6 +124,35 @@
     }
   }
 }
+// SUPPORT column: ways to give as slim pill buttons, stacked like the other
+// columns' links and no taller than them.
+.cs_footer_give {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cs_footer_give_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 3px 18px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid var(--heading-color);
+  border-radius: 1.6em;
+  background-color: transparent;
+  font-weight: 700;
+  color: var(--heading-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover,
+  &:focus-visible {
+    background-color: var(--heading-color);
+    color: var(--white-color);
+  }
+}
 .cs_footer_widget_title {
   font-size: 16px;
   margin-bottom: 20px;
@@ -148,6 +177,10 @@
   .cs_footer_col {
     flex: none;
     max-width: 150px;
+    // Room for "YEARS OF GROWING" on one line.
+    @container page (max-width: 991px) {
+      max-width: 170px;
+    }
 
     &:first-child {
       flex: 1;

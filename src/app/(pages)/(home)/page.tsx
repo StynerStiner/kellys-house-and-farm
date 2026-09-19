@@ -14,6 +14,7 @@ import {
 	MetaDataProps,
 	ServiceDataProps,
 	TestimonialDataProps,
+	TributeDataProps,
 	ValueDataProps,
 	WorkingProcessDataProps,
 	WorksDataProps,
@@ -24,6 +25,7 @@ import FeatureSection from "@/app/ui/FeatureSection";
 import HeroSection from "@/app/ui/Hero";
 import ServicesSection from "@/app/ui/ServicesSection";
 import TestimonialSection from "@/app/ui/TestimonialSection";
+import TributeSection from "@/app/ui/TributeSection";
 import ValueSection from "@/app/ui/ValueSection";
 import WorkingProcessSection from "@/app/ui/WorkingProcess";
 import WorksSection from "@/app/ui/WorksSection";
@@ -84,12 +86,18 @@ const aboutData: AboutUsDataProps = {
 		videoUrl: "/assets/keisha-videos/breaking-ground-2026.mp4",
 		backgroundImage: `${CANTON}/breaking-ground.jpg`,
 	},
-	cta: {
-		backgroundImage: `${CANTON}/2026-05-17-shell-piece.jpg`,
-		title: "",
-		buttonText: "The Garden Now",
-		buttonUrl: "#garden-now",
-	},
+};
+
+const tributeData: TributeDataProps = {
+	label: "FOR THE ANCESTORS",
+	title: "SHELLS THAT <span>REMEMBER</span>",
+	image: `${CANTON}/2026-05-17-shell-piece.jpg`,
+	imageAlt: "Strands of cowrie shells, threaded by hand, hanging from the crossbar in the Canton yard",
+	imageWidth: 1200,
+	imageHeight: 1600,
+	placard: "Cowrie shells, threaded by hand · Canton, Mississippi · May 17, 2026",
+	text: "Each cowrie began in warm ocean water, a world away from Mississippi. For centuries these small shells were money, adornment and something sacred, strung, worn and carried across the sea. Now, threaded by hand, they sway over family land in Canton, catching the light and keeping the ancestors close.",
+	dedication: "In loving memory of Henry and Rosie Lee Kelly",
 };
 
 const workingProcessData: WorkingProcessDataProps = {
@@ -112,9 +120,9 @@ const workingProcessData: WorkingProcessDataProps = {
 			description: "May 16. Cannas go in along the house wall.",
 		},
 		{
-			title: "04 | Cowrie shells",
+			title: "04 | Cowrie shells for the ancestors",
 			description:
-				"May 17. A piece made by hand from strands of cowrie shells hangs from the crossbar.",
+				"May 17. A piece made by hand from strands of cowrie shells now hangs from the crossbar. Across West Africa and the African diaspora, cowries are a link to the ancestors. Here they honor Henry and Rosie Lee Kelly and all who came before.",
 		},
 		{
 			title: "05 | Okra, knee high",
@@ -126,33 +134,36 @@ const workingProcessData: WorkingProcessDataProps = {
 
 const featureData: FeatureDataProps = {
 	sectionTitle: "WHAT <span>COMES NEXT</span>",
-	buttonText: "How to Help",
+	buttonText: "Help the Garden Grow",
 	buttonUrl: "#support",
 	image: `${CANTON}/okra-knee-high.jpg`,
+	imageAlt: "Okra standing knee high in the Canton garden",
 	imageWidth: 782,
 	imageHeight: 1510,
 	features: [
 		{
 			icon: "fa6-solid:droplet",
-			title: "Water",
-			description: "Install irrigation for the beds.",
+			title: "Water for every bed",
+			description:
+				"The okra is already knee high, but the beds still wait on the weather. Irrigation means steady water through the Mississippi summer, so nothing planted is lost to a dry spell.",
 		},
 		{
 			icon: "fa6-solid:sun",
-			title: "A high tunnel",
-			description: "Build a high tunnel to grow for more of the year.",
+			title: "A high tunnel for more seasons",
+			description:
+				"A high tunnel is a simple greenhouse over the soil. It shelters young plants from heat, storms and frost, and stretches the season so there’s fresh food for more of the year.",
 		},
 		{
 			icon: "fa6-solid:seedling",
-			title: "Tools and seed",
+			title: "Seeds for the old crops",
 			description:
-				"Buy tools and grow food: the crops Keisha’s grandparents grew, back on the same land.",
+				"Corn, okra, peas, beans, sweet potatoes, greens: the crops Henry and Rosie Lee Kelly grew, back in the same ground. Tools and seed are how their garden comes back to life.",
 		},
 		{
 			icon: "fa6-solid:people-group",
-			title: "People and skills",
+			title: "Hands to share the work",
 			description:
-				"Pay staff, and learn the skills to run the garden well: growing, payroll and marketing.",
+				"A garden that feeds a community takes more than one pair of hands. Support pays people to work the land and builds the skills to run it well, from planting to payroll to getting the harvest to neighbors.",
 		},
 	],
 };
@@ -170,6 +181,16 @@ const servicesData: ServiceDataProps = {
 			link: "#harvest",
 			tags: [{ label: "2020", url: "#growing" }],
 			description: "",
+			details: {
+				story: "Every garden starts with the ground under it. Here, a mountain of fresh wood chips and the tools to move it, one forkful at a time.",
+				imageWidth: 809,
+				imageHeight: 1078,
+				facts: [
+					{ label: "Used for", value: "Mulch on paths and around plants" },
+					{ label: "What they do", value: "Hold moisture in the soil and keep weeds down" },
+					{ label: "Over time", value: "Break down into rich, dark soil" },
+				],
+			},
 		},
 		{
 			title: "CARROTS",
@@ -178,6 +199,17 @@ const servicesData: ServiceDataProps = {
 			link: "#harvest",
 			tags: [{ label: "2021", url: "#growing" }],
 			description: "",
+			details: {
+				story: "Pulled from the ground and bunched with their feathery green tops still on, straight from the bed.",
+				imageWidth: 1437,
+				imageHeight: 1078,
+				facts: [
+					{ label: "Season", value: "Cool weather, in spring and fall" },
+					{ label: "Grown from", value: "Seed sown straight into the soil" },
+					{ label: "Ready in", value: "About 70 to 80 days" },
+					{ label: "Good to know", value: "A cool snap makes them sweeter" },
+				],
+			},
 		},
 		{
 			title: "SEEDLINGS",
@@ -186,6 +218,16 @@ const servicesData: ServiceDataProps = {
 			link: "#harvest",
 			tags: [{ label: "2022", url: "#growing" }],
 			description: "",
+			details: {
+				story: "Rows of young plants with bright red stems, started from seed in trays and grown strong before they go into the ground.",
+				imageWidth: 1437,
+				imageHeight: 1078,
+				facts: [
+					{ label: "Why trays", value: "Seeds sprout sheltered from weather and pests" },
+					{ label: "Ready to plant", value: "Usually 4 to 6 weeks after sowing" },
+					{ label: "Next step", value: "Moved into the beds once they’re sturdy" },
+				],
+			},
 		},
 		{
 			title: "ONIONS",
@@ -194,6 +236,16 @@ const servicesData: ServiceDataProps = {
 			link: "#harvest",
 			tags: [{ label: "June 2025", url: "#growing" }],
 			description: "",
+			details: {
+				story: "White, yellow and red onions spread out on a rack after harvest, roots and all.",
+				imageWidth: 809,
+				imageHeight: 1078,
+				facts: [
+					{ label: "Ready to pull", value: "When the tops flop over and turn brown" },
+					{ label: "After harvest", value: "Cured in a dry, airy spot for 2 to 3 weeks" },
+					{ label: "Then", value: "Keep for months somewhere cool and dry" },
+				],
+			},
 		},
 		{
 			title: "SUMMER HARVEST",
@@ -202,6 +254,16 @@ const servicesData: ServiceDataProps = {
 			link: "#harvest",
 			tags: [{ label: "August 2025", url: "#growing" }],
 			description: "",
+			details: {
+				story: "A box full of summer: yellow squash, striped zucchini and ripe tomatoes, picked at their peak.",
+				imageWidth: 809,
+				imageHeight: 1078,
+				facts: [
+					{ label: "Season", value: "The heat of summer" },
+					{ label: "Squash and zucchini", value: "Grow fast; best picked young and tender" },
+					{ label: "Tomatoes", value: "Sweetest when left to ripen on the vine" },
+				],
+			},
 		},
 	],
 };
@@ -361,13 +423,19 @@ const worksData: WorksDataProps = {
 			location: "",
 			description: "A strawberry, straight from the patch.",
 		},
-		{
-			image: `${PHOTOS}/IMG_0223.jpg`,
-			name: "AN OFFERING",
-			location: "",
-			description: "A small offering in the field: Water Is Life.",
-		},
 	],
+};
+
+const offeringData: TributeDataProps = {
+	label: "GIVING BACK",
+	title: "AN <span>OFFERING</span>",
+	image: `${PHOTOS}/IMG_0223.jpg`,
+	imageAlt: "An offering in the field: squash in a shell bowl, cucumbers, beans and sunflowers laid in a ring of straw beneath a Water Is Life banner",
+	imageWidth: 809,
+	imageHeight: 1078,
+	placard: "From the harvest · Given back to the soil",
+	text: "Before the harvest is carried away, some of it goes back. Yellow squash in a shell bowl, cucumbers, beans and sunflowers, laid in a ring of straw beneath a banner. A thank-you to the soil, the rain and the hands that came before.",
+	dedication: "Water is life.",
 };
 
 const ctaData: CTADataProps = {
@@ -391,6 +459,9 @@ export default function HomePage() {
 			<div id="story" className="cs_anchor">
 				<AboutUsSection data={aboutData} />
 			</div>
+			<div id="ancestors" className="cs_anchor">
+				<TributeSection data={tributeData} />
+			</div>
 			<div id="garden-now" className="cs_anchor">
 				<WorkingProcessSection data={workingProcessData} />
 			</div>
@@ -408,6 +479,9 @@ export default function HomePage() {
 			</div>
 			<div id="harvest" className="cs_anchor">
 				<WorksSection data={worksData} />
+			</div>
+			<div id="offering" className="cs_anchor">
+				<TributeSection data={offeringData} />
 			</div>
 			<div id="support" className="cs_anchor">
 				<CTASection data={ctaData} />

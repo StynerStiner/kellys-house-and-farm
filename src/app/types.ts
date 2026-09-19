@@ -23,7 +23,7 @@ export interface AboutUsDataProps {
 	imageWidth?: number;
 	imageHeight?: number;
 	video: VideoDataProps;
-	cta: CTADataProps;
+	cta?: CTADataProps;
 }
 
 export interface BreadCrumbsDataProps {
@@ -145,6 +145,7 @@ export interface FeatureDataProps {
 	buttonText: string;
 	buttonUrl: string;
 	image: string;
+	imageAlt?: string;
 	// Intrinsic size of `image`, so the page reserves the right height before it loads.
 	imageWidth?: number;
 	imageHeight?: number;
@@ -274,6 +275,14 @@ export interface ServiceDataProps {
 		link: string;
 		tags: { label: string; url: string }[];
 		description: string;
+		// When set, the card's arrow opens a pop-out card with these details
+		// instead of following `link`.
+		details?: {
+			story: string;
+			imageWidth: number;
+			imageHeight: number;
+			facts: { label: string; value: string }[];
+		};
 	}[];
 }
 
@@ -359,6 +368,19 @@ export interface TestimonialDataProps {
 		designation: string;
 		img: string;
 	}[];
+}
+
+// Tribute Section Data Type
+export interface TributeDataProps {
+	label: string;
+	title: string;
+	image: string;
+	imageAlt: string;
+	imageWidth: number;
+	imageHeight: number;
+	placard?: string;
+	text: string;
+	dedication?: string;
 }
 
 // Video block section

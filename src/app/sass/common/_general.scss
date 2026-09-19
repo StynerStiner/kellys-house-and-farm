@@ -613,7 +613,7 @@ hr {
 			max-width: 260px;
 		}
 		@container page (max-width: 991px) {
-			max-width: 220px;
+			max-width: 280px;
 		}
 	}
 }
@@ -699,6 +699,172 @@ hr {
 		line-height: inherit;
 		-webkit-initial-letter: 3;
 		initial-letter: 3;
+	}
+}
+// Tribute: a photo in an arched frame like an altar niche, a placard
+// line under it and a dedication to close.
+.cs_tribute_niche {
+	max-width: 88%;
+	margin-inline: auto;
+	overflow: hidden;
+	// A semicircular arch on a 3:4 portrait photo.
+	border-radius: 50% 50% 20px 20px / 37.5% 37.5% 20px 20px;
+	outline: 1px solid rgb(55 72 54 / 35%);
+	outline-offset: 10px;
+	box-shadow: 0 24px 50px rgb(55 72 54 / 18%);
+	img {
+		display: block;
+	}
+}
+.cs_tribute_placard {
+	margin-top: 30px;
+	text-align: center;
+	text-wrap: balance;
+	font-size: 14px;
+	line-height: 1.6em;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgb(55 72 54 / 70%);
+}
+.cs_tribute_text {
+	max-width: 640px;
+	margin-inline: auto;
+	color: rgb(55 72 54 / 80%);
+}
+.cs_tribute_dedication {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	text-align: center;
+	text-wrap: balance;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--heading-color);
+	&::before,
+	&::after {
+		content: "";
+		flex: 0 0 36px;
+		height: 1px;
+		background-color: currentColor;
+		opacity: 0.4;
+	}
+}
+// Pop-out card for a Years of Growing entry.
+html:has(.cs_detail_dialog[open]) {
+	overflow: hidden;
+}
+.cs_detail_dialog {
+	width: min(520px, calc(100vw - 32px));
+	max-height: calc(100dvh - 32px);
+	padding: 0;
+	border: none;
+	border-radius: 20px;
+	overflow: hidden auto;
+	overscroll-behavior: contain;
+	background-color: var(--white-color);
+	box-shadow: 0 30px 80px rgb(0 0 0 / 35%);
+	&::backdrop {
+		background-color: rgb(55 72 54 / 65%);
+		backdrop-filter: blur(3px);
+	}
+	&[open] {
+		animation: cs_detail_pop 0.35s ease;
+	}
+}
+@keyframes cs_detail_pop {
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.cs_detail_dialog[open] {
+		animation: none;
+	}
+}
+// Zero-height sticky bar so the close button stays in reach while the card
+// scrolls, without pushing the photo down.
+.cs_detail_close_wrap {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
+	height: 0;
+}
+.cs_detail_close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 44px;
+	height: 44px;
+	margin: 14px 14px 0 0;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	background-color: rgb(249 251 243 / 90%);
+	color: var(--heading-color);
+	box-shadow: 0 4px 14px rgb(0 0 0 / 20%);
+}
+.cs_detail_img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.cs_detail_body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 14px;
+	padding: 26px 24px 30px;
+}
+.cs_detail_tag {
+	padding: 6px 16px;
+	border: 1px solid var(--heading-color);
+	border-radius: 1.6em;
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--heading-color);
+}
+.cs_detail_story {
+	font-size: 18px;
+	line-height: 1.55em;
+	color: rgb(55 72 54 / 80%);
+}
+.cs_detail_facts_title {
+	margin-top: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgb(55 72 54 / 70%);
+}
+.cs_detail_facts {
+	align-self: stretch;
+	> div {
+		padding: 12px 0;
+		border-top: 1px solid rgb(55 72 54 / 15%);
+		&:last-child {
+			border-bottom: 1px solid rgb(55 72 54 / 15%);
+		}
+	}
+	dt {
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgb(55 72 54 / 60%);
+	}
+	dd {
+		margin: 2px 0 0;
+		font-size: 17px;
+		color: var(--heading-color);
 	}
 }
 .cs_section_heading.cs_style_5 {

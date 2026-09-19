@@ -14,8 +14,14 @@ interface FormState {
 	email: string;
 }
 
+// FormSubmit emails each sign-up to this inbox. The very first submission
+// sends an "Activate Form" email there; nothing is delivered until someone
+// clicks it.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/lashakelly@gmail.com";
+
 const FooterForm = () => {
 	const [form, setForm] = useState<FormState>({ email: "" });
+	const [sending, setSending] = useState<boolean>(false);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -36,26 +42,34 @@ const FooterForm = () => {
 			return toast.error("Please enter a valid email address!");
 		}
 
-		const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-
-		const formData = new FormData();
-		formData.append("access_key", apiKey || "");
-		formData.append("email", form.email);
-
+		setSending(true);
 		try {
-			const res = await fetch("https://api.web3forms.com/submit", {
+			const res = await fetch(FORM_ENDPOINT, {
 				method: "POST",
-				body: formData,
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify({
+					// FormSubmit uses a field named "email" as the reply-to address.
+					email: form.email,
+					_subject: "New sign-up from the Kelly’s House and Farm website",
+					_template: "table",
+				}),
 			});
+			const result = await res.json().catch(() => null);
 
-			if (res.ok) {
-				toast.success("Subscription successful!");
+			// FormSubmit answers { success: "true" | "false", message }.
+			if (res.ok && String(result?.success) === "true") {
+				toast.success("Thank you! You’re signed up.");
 				setForm({ email: "" });
 			} else {
-				toast.error("Failed to send message. Try again.");
+				toast.error("Sign-up didn’t go through. Please try again later.");
 			}
-		} catch (err) {
+		} catch {
 			toast.error("Network error. Please try again later.");
+		} finally {
+			setSending(false);
 		}
 	};
 	return (
@@ -65,12 +79,15 @@ const FooterForm = () => {
 				name="email"
 				className="cs_newsletter_input"
 				placeholder="Enter your email address ..."
+				aria-label="Your email address"
 				value={form.email}
 				onChange={handleChange}
 			/>
 			<button
 				type="submit"
 				className="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color"
+				aria-label="Sign up"
+				disabled={sending}
 			>
 				<svg
 					width={16}

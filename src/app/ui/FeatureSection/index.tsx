@@ -40,7 +40,7 @@ export default function FeatureSection({ data }: FeatureSectionProps) {
 						<div className="cs_img_box cs_style_1" data-aos="fade-right">
 							<Image
 								src={data.image}
-								alt="Feature"
+								alt={data.imageAlt ?? "Feature"}
 								width={data.imageWidth ?? 600}
 								height={data.imageHeight ?? 400}
 								className="object-cover"
@@ -52,12 +52,14 @@ export default function FeatureSection({ data }: FeatureSectionProps) {
 							{data.features.map((item, index) => (
 								<div className="col-sm-6" key={index}>
 									<div className="cs_iconbox cs_style_1">
-										<div className="cs_iconbox_icon cs_center cs_mb_24">
-											<i className="d-flex">
-												<Icon icon={item.icon} width="22" height="19" />
-											</i>
+										<div className="cs_iconbox_head cs_mb_12">
+											<div className="cs_iconbox_icon cs_center">
+												<i className="d-flex">
+													<Icon icon={item.icon} width="22" height="19" />
+												</i>
+											</div>
+											<h3 className="cs_fs_24 mb-0">{item.title}</h3>
 										</div>
-										<h3 className="cs_fs_24 cs_mb_12">{item.title}</h3>
 										<p className="mb-0 cs_fs_20">{item.description}</p>
 									</div>
 								</div>
@@ -66,7 +68,8 @@ export default function FeatureSection({ data }: FeatureSectionProps) {
 					</div>
 				</div>
 			</div>
-			<div className="cs_height_100 cs_height_lg_70" />
+			{/* Shorter than the top spacer: the next section brings its own top space. */}
+			<div className="cs_height_60 cs_height_lg_30" />
 		</section>
 	);
 }
