@@ -7,6 +7,7 @@
  */
 
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import VideoModal from "../VideoModal";
@@ -44,6 +45,19 @@ export default function AboutUsSection({ data }: AboutUsSectionProps) {
 								dangerouslySetInnerHTML={{ __html: data.title }}
 							></h2>
 						</div>
+						{data.image && (
+							<>
+								<div className="cs_height_40 cs_height_lg_24" />
+								<div className="cs_img_box cs_style_1" data-aos="fade-up">
+									<Image
+										src={data.image}
+										alt={data.imageAlt ?? ""}
+										width={data.imageWidth ?? 600}
+										height={data.imageHeight ?? 800}
+									/>
+								</div>
+							</>
+						)}
 					</div>
 					<div className="col-lg-4">
 						<p

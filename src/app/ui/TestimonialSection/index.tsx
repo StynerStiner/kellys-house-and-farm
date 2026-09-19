@@ -8,6 +8,7 @@
 
 "use client";
 import { TestimonialDataProps } from "@/app/types";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,6 +54,20 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
 
 				<div className="row">
 					<div className="col-lg-10 offset-lg-1">
+						{data.image && (
+							<>
+								<div data-aos="fade-up">
+									<Image
+										src={data.image}
+										alt={data.imageAlt ?? ""}
+										width={data.imageWidth ?? 600}
+										height={data.imageHeight ?? 800}
+										className="w-100 h-auto cs_radius_20"
+									/>
+								</div>
+								<div className="cs_height_64 cs_height_lg_50" />
+							</>
+						)}
 						<Swiper
 							modules={[Navigation]}
 							spaceBetween={24}

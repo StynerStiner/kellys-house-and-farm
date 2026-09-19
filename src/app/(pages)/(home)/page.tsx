@@ -75,6 +75,10 @@ const aboutData: AboutUsDataProps = {
 		"When Keisha was a child, her grandfather gave her a handful of seeds. Her grandparents, Henry and Rosie Lee Kelly, kept a garden on family land in Canton, Mississippi. They grew corn, okra, peas, beans, tomatoes, peppers, watermelon, sweet potatoes, greens, squash and cucumbers.",
 	introduction1:
 		"After they passed, the garden went dormant. This spring the ground was tilled again and okra went in. Kelly’s House and Farm is bringing the garden back so the land can feed the surrounding community with fresh produce again.",
+	image: `${PHOTOS}/IMG_0442.jpg`,
+	imageAlt: "Keisha in the garden, holding an armful of roots she just pulled",
+	imageWidth: 809,
+	imageHeight: 1078,
 	video: {
 		videoUrl: "/assets/keisha-videos/breaking-ground-2026.mp4",
 		backgroundImage: `${CANTON}/breaking-ground.jpg`,
@@ -159,6 +163,14 @@ const servicesData: ServiceDataProps = {
 	buttonUrl: "#harvest",
 	service: [
 		{
+			title: "WOOD CHIPS",
+			subtitle: "Pitchfork in hand on a pile of wood chips, January 2020.",
+			image: `${PHOTOS}/IMG_20200115_125203253_HDR.jpg`,
+			link: "#harvest",
+			tags: [{ label: "2020", url: "#growing" }],
+			description: "",
+		},
+		{
 			title: "CARROTS",
 			subtitle: "Carrots pulled and bunched, October 2021.",
 			image: `${PHOTOS}/IMG_0772.jpg`,
@@ -193,8 +205,50 @@ const servicesData: ServiceDataProps = {
 	],
 };
 
+const fieldData: WorksDataProps = {
+	title: "IN THE <span>FIELD</span>",
+	subtitle: "GROWING",
+	labels: { name: "GROWING", location: "" },
+	slides: [
+		{
+			image: `${PHOTOS}/IMG_1237.jpg`,
+			name: "KALE & LETTUCE",
+			location: "",
+			description: "Rows of kale next to red and green lettuce.",
+		},
+		{
+			image: `${PHOTOS}/70415631473__B1FEF395-D4CF-4AA0-BE75-85121746AC68.jpg`,
+			name: "LETTUCE ROWS",
+			location: "",
+			description: "Rows of lettuce coming up.",
+		},
+		{
+			image: `${PHOTOS}/IMG_0270.jpg`,
+			name: "SUNFLOWERS & CORN",
+			location: "",
+			description: "Sunflowers standing over a row of corn.",
+		},
+		{
+			image: `${PHOTOS}/IMG_0273.jpg`,
+			name: "AMARANTH",
+			location: "",
+			description: "Red amaranth in bloom among the squash.",
+		},
+		{
+			image: `${PHOTOS}/IMG_2127.jpg`,
+			name: "POPPIES",
+			location: "",
+			description: "California poppies and calendula along a bed.",
+		},
+	],
+};
+
 const testimonialData: TestimonialDataProps = {
 	sectionTitle: "IN HER WORDS",
+	image: `${PHOTOS}/image000000.jpg`,
+	imageAlt: "Keisha in a strawberry patch, tasting a strawberry",
+	imageWidth: 812,
+	imageHeight: 1078,
 	testimonials: [
 		{
 			text: "“The time has come for <span>seeds</span> sown long ago by my <span>ancestors</span> to bring forth <span>harvest</span>.”",
@@ -265,6 +319,48 @@ const worksData: WorksDataProps = {
 			description: "A table of greens.",
 		},
 		{
+			image: `${PHOTOS}/IMG_0430.jpg`,
+			name: "TOMATOES & SQUASH",
+			location: "",
+			description: "Trays of tomatoes, squash, cucumbers and peppers.",
+		},
+		{
+			image: `${PHOTOS}/IMG_0213.jpg`,
+			name: "PUMPKINS & PEPPERS",
+			location: "",
+			description: "Pumpkins, squash, tomatoes and peppers on the table.",
+		},
+		{
+			image: `${PHOTOS}/IMG_0401.jpg`,
+			name: "BEAN PODS",
+			location: "",
+			description: "A crate full of bean pods.",
+		},
+		{
+			image: `${PHOTOS}/65514624768__A1521AB6-03A2-4816-9692-5AC4CDB7F980.jpg`,
+			name: "GINGER & BITTER MELON",
+			location: "",
+			description: "Ginger, bitter melon and long beans.",
+		},
+		{
+			image: `${PHOTOS}/IMG_1608.jpg`,
+			name: "LETTUCE",
+			location: "",
+			description: "Heads of butter lettuce.",
+		},
+		{
+			image: `${PHOTOS}/IMG_2878.jpg`,
+			name: "SORGHUM",
+			location: "",
+			description: "Red and gold sorghum heads.",
+		},
+		{
+			image: `${PHOTOS}/image000000.jpg`,
+			name: "STRAWBERRIES",
+			location: "",
+			description: "A strawberry, straight from the patch.",
+		},
+		{
 			image: `${PHOTOS}/IMG_0223.jpg`,
 			name: "AN OFFERING",
 			location: "",
@@ -302,6 +398,9 @@ export default function HomePage() {
 			</div>
 			<div id="growing" className="cs_anchor">
 				<ServicesSection data={servicesData} />
+			</div>
+			<div id="field" className="cs_anchor">
+				<WorksSection data={fieldData} />
 			</div>
 			<div id="her-words" className="cs_anchor">
 				<TestimonialSection data={testimonialData} />

@@ -17,6 +17,10 @@ export interface AboutUsDataProps {
 	title: string;
 	introduction: string;
 	introduction1: string;
+	image?: string;
+	imageAlt?: string;
+	imageWidth?: number;
+	imageHeight?: number;
 	video: VideoDataProps;
 	cta: CTADataProps;
 }
@@ -344,6 +348,10 @@ export interface TeamMembersDataProps {
 // Testimonial Section Data Type
 export interface TestimonialDataProps {
 	sectionTitle: string;
+	image?: string;
+	imageAlt?: string;
+	imageWidth?: number;
+	imageHeight?: number;
 	testimonials: {
 		text: string;
 		name: string;
