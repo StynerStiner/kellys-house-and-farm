@@ -15,7 +15,7 @@ import { ToastContainer } from "react-toastify";
 import { GlobalChildrenProps } from "./types";
 
 // Keisha is keeping the project low key: keep every page out of search engines
-// until she decides to go public.
+// until Keisha decides to go public.
 export const metadata: Metadata = {
 	robots: { index: false, follow: false },
 	authors: [{ name: "StynerDev", url: "https://www.stynerdev.com/" }],

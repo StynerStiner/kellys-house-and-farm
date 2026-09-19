@@ -71,12 +71,13 @@ const valueData: ValueDataProps = {
 
 const aboutData: AboutUsDataProps = {
 	title: "OUR STORY",
+	subtitle: "A HANDFUL <span>OF SEEDS</span>",
 	introduction:
-		"When Keisha was a child, her grandfather gave her a handful of seeds. Her grandparents, Henry and Rosie Lee Kelly, kept a garden on family land in Canton, Mississippi. They grew corn, okra, peas, beans, tomatoes, peppers, watermelon, sweet potatoes, greens, squash and cucumbers.",
+		"It began with a handful of seeds, a grandfather’s gift to Keisha as a child. The Kelly grandparents, Henry and Rosie Lee, kept a garden on family land in Canton, Mississippi. They grew corn, okra, peas, beans, tomatoes, peppers, watermelon, sweet potatoes, greens, squash and cucumbers.",
 	introduction1:
 		"After they passed, the garden went dormant. This spring the ground was tilled again and okra went in. Kelly’s House and Farm is bringing the garden back so the land can feed the surrounding community with fresh produce again.",
 	image: `${PHOTOS}/IMG_0442.jpg`,
-	imageAlt: "Keisha in the garden, holding an armful of roots she just pulled",
+	imageAlt: "Keisha in the garden, holding an armful of just-pulled roots",
 	imageWidth: 809,
 	imageHeight: 1078,
 	video: {
@@ -145,7 +146,7 @@ const featureData: FeatureDataProps = {
 			icon: "fa6-solid:seedling",
 			title: "Tools and seed",
 			description:
-				"Buy tools and grow food: the crops her grandparents grew, back on the same land.",
+				"Buy tools and grow food: the crops Keisha’s grandparents grew, back on the same land.",
 		},
 		{
 			icon: "fa6-solid:people-group",
@@ -244,7 +245,7 @@ const fieldData: WorksDataProps = {
 };
 
 const testimonialData: TestimonialDataProps = {
-	sectionTitle: "IN HER WORDS",
+	sectionTitle: "IN KEISHA’S WORDS",
 	image: `${PHOTOS}/image000000.jpg`,
 	imageAlt: "Keisha in a strawberry patch, tasting a strawberry",
 	imageWidth: 812,
@@ -259,7 +260,7 @@ const testimonialData: TestimonialDataProps = {
 		{
 			text: "“They grew all types of vegetables: corn, <span>okra</span>, peas, beans, tomatoes, peppers, watermelon, <span>sweet potatoes</span>, a variety of greens, squash, cucumbers.”",
 			name: "LEKEISHA SIMPSON",
-			designation: "On her grandparents’ garden",
+			designation: "On the grandparents’ garden",
 			img: "",
 		},
 		{
@@ -280,7 +281,7 @@ const worksData: WorksDataProps = {
 			image: `${PHOTOS}/IMG_0418.jpg`,
 			name: "OKRA",
 			location: "",
-			description: "Okra, one of the crops her grandparents grew.",
+			description: "Okra, one of the crops Keisha’s grandparents grew.",
 		},
 		{
 			image: `${PHOTOS}/IMG_0419.jpg`,
@@ -402,7 +403,7 @@ export default function HomePage() {
 			<div id="field" className="cs_anchor">
 				<WorksSection data={fieldData} />
 			</div>
-			<div id="her-words" className="cs_anchor">
+			<div id="keishas-words" className="cs_anchor">
 				<TestimonialSection data={testimonialData} />
 			</div>
 			<div id="harvest" className="cs_anchor">

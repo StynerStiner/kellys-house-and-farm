@@ -33,7 +33,7 @@ export default function termsAndCondition() {
 				<div className="cs_text_block_wrapper">
 					<div className="cs_text_block">
 						<h2 className="cs_fs_32">1. The story and photos</h2>
-						<p>The words, photos and video on this page belong to Lekeisha Simpson and her family. Please don&rsquo;t copy or reuse them without permission.</p>
+						<p>The words, photos and video on this page belong to Lekeisha Simpson and family. Please don&rsquo;t copy or reuse them without permission.</p>
 					</div>
 					<div className="cs_text_block">
 						<h2 className="cs_fs_32">2. Gifts</h2>

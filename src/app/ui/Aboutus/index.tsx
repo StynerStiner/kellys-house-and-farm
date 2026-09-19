@@ -39,11 +39,26 @@ export default function AboutUsSection({ data }: AboutUsSectionProps) {
 				<div className="row cs_gap_x_40 cs_gap_y_24">
 					<div className="col-lg-4">
 						<div className="cs_section_heading cs_style_4">
-							<h2
-								className="cs_section_title cs_fs_32 cs_bold mb-0 wow fadeInDown"
-								data-aos="fade-down"
-								dangerouslySetInnerHTML={{ __html: data.title }}
-							></h2>
+							{data.subtitle ? (
+								<>
+									<h3
+										className="cs_brackets_title cs_normal cs_fs_16 cs_mb_24"
+										data-aos="fade-down"
+										dangerouslySetInnerHTML={{ __html: data.title }}
+									/>
+									<h2
+										className="cs_section_title cs_fs_80 mb-0"
+										data-aos="fade-down"
+										dangerouslySetInnerHTML={{ __html: data.subtitle }}
+									/>
+								</>
+							) : (
+								<h2
+									className="cs_section_title cs_fs_32 cs_bold mb-0 wow fadeInDown"
+									data-aos="fade-down"
+									dangerouslySetInnerHTML={{ __html: data.title }}
+								></h2>
+							)}
 						</div>
 						{data.image && (
 							<>

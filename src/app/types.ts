@@ -15,6 +15,7 @@ export interface GlobalChildrenProps {
 
 export interface AboutUsDataProps {
 	title: string;
+	subtitle?: string;
 	introduction: string;
 	introduction1: string;
 	image?: string;

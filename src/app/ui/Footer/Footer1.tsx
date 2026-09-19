@@ -29,7 +29,7 @@ const data: FooterDataProps = {
 			title: "GROWING",
 			links: [
 				{ label: "YEARS OF GROWING", url: "/#growing" },
-				{ label: "IN HER WORDS", url: "/#her-words" },
+				{ label: "IN KEISHA’S WORDS", url: "/#keishas-words" },
 				{ label: "FROM THE HARVEST", url: "/#harvest" },
 			],
 		},
