@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw phone footage — originals live outside the repo, commit only web encodes.
+# (Not *.MP4/*.MOV: core.ignorecase is on, so those would also match the
+# lowercase .mp4 encodes we DO ship.)
+/public/assets/keisha-videos/raw/

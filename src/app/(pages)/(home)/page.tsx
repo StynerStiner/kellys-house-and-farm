@@ -53,11 +53,13 @@ const heroData: HeroDataProps = {
 		link: "#garden-now",
 	},
 	backgrounds: [
-		`${CANTON}/family-maypole.jpg`,
-		`${CANTON}/2026-05-11-lawn.jpg`,
-		`${CANTON}/breaking-ground.jpg`,
-		`${CANTON}/2026-05-16-cannas.jpg`,
-		`${CANTON}/okra-knee-high.jpg`,
+		{ src: `${CANTON}/family-maypole.jpg` },
+		{ src: `${CANTON}/2026-05-11-lawn.jpg` },
+		{ src: `${CANTON}/breaking-ground.jpg` },
+		{ src: `${CANTON}/2026-05-16-cannas.jpg` },
+		// Tall phone photo: hold the crop near the top so the bloom stays in frame.
+		{ src: `${PHOTOS}/yellow-canna-lily-flower.jpg`, position: "center 22%" },
+		{ src: `${CANTON}/okra-knee-high.jpg` },
 	],
 };
 
@@ -98,6 +100,11 @@ const tributeData: TributeDataProps = {
 	placard: "Cowrie shells, threaded by hand · Canton, Mississippi · May 17, 2026",
 	text: "Each cowrie began in warm ocean water, a world away from Mississippi. For centuries these small shells were money, adornment and something sacred, strung, worn and carried across the sea. Now, threaded by hand, they sway over family land in Canton, catching the light and keeping the ancestors close.",
 	dedication: "In loving memory of Henry and Rosie Lee Kelly",
+	video: {
+		videoUrl: "/assets/keisha-videos/land-2026.mp4",
+		backgroundImage: `${CANTON}/land-2026-poster.jpg`,
+		caption: "The land they kept · Canton, Mississippi",
+	},
 };
 
 const workingProcessData: WorkingProcessDataProps = {
@@ -108,16 +115,17 @@ const workingProcessData: WorkingProcessDataProps = {
 		{
 			title: "01 | A lawn in clover",
 			description:
-				"May 11, 2026. The yard as it was: the big tree, the smoker, the fire pit and the crossbar. Nothing planted yet.",
+				"May 11, 2026. The yard as it was: the big tree, the smoker, the fire pit and the crossbar. White clover had run through the whole lawn, quietly putting nitrogen back into soil that had rested since Henry and Rosie Lee Kelly last worked it. Nothing planted yet, but the ground was ready.",
 		},
 		{
 			title: "02 | Breaking ground",
 			description:
-				"A tractor tills the first bed, and the clods are broken up by hand with a hoe.",
+				"A tractor opens the first bed in a single pass, and the clods are broken up by hand with a hoe. The tractor does in an hour what once took days, but the hoe work is unchanged: the same stoop, the same swing this ground has known before. Under the lawn, the soil came up dark.",
 		},
 		{
-			title: "03 | Cannas along the house",
-			description: "May 16. Cannas go in along the house wall.",
+			title: "03 | Yellow canna lilies along the house",
+			description:
+				"May 16. Yellow canna lilies, Canna ‘Cannova Yellow’, go in along the house wall, which is just where they show best: massed against a wall, where they stand out. They take the full Mississippi sun, rise two and a half to four feet on large, pointed blue-green leaves, and send up spikes of yellow flowers from spring until the first frost. Hummingbirds and butterflies come to them, and winters here stay mild enough that the roots hold in the ground instead of being lifted and stored.",
 		},
 		{
 			title: "04 | Cowrie shells for the ancestors",
@@ -127,7 +135,7 @@ const workingProcessData: WorkingProcessDataProps = {
 		{
 			title: "05 | Okra, knee high",
 			description:
-				"Okra stands knee high in ground that was lawn in May.",
+				"Okra stands knee high in ground that was lawn in May. It was one of the old crops here and it is the first one back, because okra wants heat and a Mississippi summer gives it plenty. Cut the pods young and the plant keeps setting more, right through to frost.",
 		},
 	],
 };

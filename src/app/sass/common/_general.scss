@@ -731,6 +731,29 @@ hr {
 	margin-inline: auto;
 	color: rgb(55 72 54 / 80%);
 }
+// A portrait clip of the land, centred under the dedication.
+.cs_tribute_video {
+	display: block;
+	position: relative;
+	width: min(320px, 100%);
+	aspect-ratio: 9 / 16;
+	margin-inline: auto;
+	overflow: hidden;
+	border-radius: 20px;
+	outline: 1px solid rgb(55 72 54 / 35%);
+	outline-offset: 10px;
+	box-shadow: 0 24px 50px rgb(55 72 54 / 18%);
+}
+.cs_tribute_video_caption {
+	margin-top: 30px;
+	text-align: center;
+	text-wrap: balance;
+	font-size: 14px;
+	line-height: 1.6em;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgb(55 72 54 / 70%);
+}
 .cs_tribute_dedication {
 	display: flex;
 	align-items: center;

@@ -1,9 +1,10 @@
 # To do with the client
 
-Two things on the site need details or a login only the client has:
+Everything below is live on https://kellys-house-and-farm.vercel.app, but these things need details, a login or a yes from the client:
 
 1. Finish the footer email sign-up
 2. Add PayPal and Zelle to the footer
+3. Confirm some wording with Keisha
 
 ## 1. Finish the footer email sign-up
 
@@ -33,12 +34,13 @@ The sign-up box in the footer ("Enter your email address …" with the arrow but
 
 ## 2. Add PayPal and Zelle to the footer
 
-The footer's **SUPPORT THE GARDEN** row shows the ways to give as rounded buttons. Venmo is live. PayPal and Zelle each have a slot ready but stay hidden until they're filled in, so no one taps a button that goes nowhere.
+The footer's **SUPPORT** column shows three slim pill buttons: **Venmo**, **PayPal** and **Zelle**. Venmo works. Until we have their details, tapping PayPal or Zelle says "…is coming soon. You can give through Venmo today."
 
 ### What to get from the client
 
+- **Zelle or Cash App?** Confirm which one the third button should be. Changing it is one word.
 - **PayPal:** their PayPal.me link, for example `https://paypal.me/…`. They can find or create it at paypal.me.
-- **Zelle:** the email or phone number their Zelle is registered to, and the name donors will see when they send, so people know it's the right person.
+- **Zelle:** the email or phone number their Zelle is registered to, and the name donors will see when they send, so people know it's the right person. (If it's Cash App instead, get their `$Cashtag`. That's a link, `https://cash.app/$…`, so it works like PayPal.)
 
 ### Where it goes
 
@@ -56,3 +58,26 @@ Tapping PayPal opens their page in a new tab. Zelle has no web link, so tapping 
 The "Help the Garden Grow Again" section just above the footer still has only a **Give via Venmo** button. Its note says "Gifts through Venmo go directly to Keisha and aren't tax-deductible." Add the PayPal and Zelle options there too, and reword the note to cover all of them.
 
 Then commit, `git push` and `vercel --prod`.
+
+## 3. Confirm some wording with Keisha
+
+We wrote these from the photos and the story. They should hear Keisha's yes before anyone treats them as final. Each one is a one-line change in `src/app/(pages)/(home)/page.tsx`.
+
+### Meaning and dedication
+
+- **Cowrie tribute dedication:** "In loving memory of Henry and Rosie Lee Kelly." Is the shell piece for them, or for the ancestors more broadly?
+- **The Garden Now, step 04:** "Here they honor Henry and Rosie Lee Kelly and all who came before." Same question.
+- **An Offering:** "Before the harvest is carried away, some of it goes back… A thank-you to the soil, the rain and the hands that came before." Does that describe what the offering means to Keisha?
+
+### Crop names we guessed from photos
+
+- **Sorghum** (harvest slider): the red and gold seed heads could be broomcorn or millet.
+- **Lettuce** (harvest slider): described as "butter lettuce."
+- **Amaranth** and **Poppies** (In the Field): "red amaranth among the squash" and "California poppies and calendula."
+- **Ginger & Bitter Melon** (harvest slider): the photo also shows long beans.
+
+### Years of Growing pop-out cards
+
+Each card's "at a glance" facts are general growing facts (for example, carrots take about 70 to 80 days). They don't say how or where Keisha grew anything. If Keisha wants to add more, like varieties, where each was grown, or a memory, it goes in the `details` of each card.
+
+Also check the first card's photo caption: "Pitchfork in hand on a pile of wood chips, January 2020." The date comes from the photo file.

@@ -162,19 +162,19 @@ export default function HeroSection({ data }: HeroSectionProps) {
               onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
               className="cs_slider_wrapper"
             >
-              {data.backgrounds.map((src, index) => (
+              {data.backgrounds.map((background, index) => (
                 <SwiperSlide key={index}>
                   <div className="cs_slide">
                     <Image
                       className="cs_hero_bg_in cs_bg_filed"
-                      src={src}
+                      src={background.src}
                       alt=""
                       fill
                       preload={index === 0}
                       style={{
                         width: "100%",
                         objectFit: "cover",
-                        objectPosition: "center",
+                        objectPosition: background.position ?? "center",
                         position: "absolute",
                         top: 0,
                         left: 0,

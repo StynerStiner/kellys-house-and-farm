@@ -210,7 +210,11 @@ export interface HeroDataProps {
 		subtitle: string;
 		link: string;
 	};
-	backgrounds: string[];
+	backgrounds: {
+		src: string;
+		/** CSS object-position, for photos whose subject is off-centre. */
+		position?: string;
+	}[];
 }
 
 export interface InfoDataProps {
@@ -381,6 +385,12 @@ export interface TributeDataProps {
 	placard?: string;
 	text: string;
 	dedication?: string;
+	video?: {
+		videoUrl: string;
+		/** Poster frame, also the still shown before the clip is opened. */
+		backgroundImage: string;
+		caption?: string;
+	};
 }
 
 // Video block section
