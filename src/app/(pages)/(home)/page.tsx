@@ -115,7 +115,7 @@ const workingProcessData: WorkingProcessDataProps = {
 		{
 			title: "01 | A lawn in clover",
 			description:
-				"May 11, 2026. The yard as it was: the big tree, the smoker, the fire pit and the crossbar. White clover had run through the whole lawn, quietly putting nitrogen back into soil that had rested since Henry and Rosie Lee Kelly last worked it. Nothing planted yet, but the ground was ready.",
+				"May 11, 2026. The yard as it was: the big tree, the smoker, the fire pit and the crossbar. White clover had run through the whole lawn, quietly putting nitrogen back into ground that had been left to itself. Nothing planted yet, but the ground was ready.",
 		},
 		{
 			title: "02 | Breaking ground",
@@ -125,7 +125,7 @@ const workingProcessData: WorkingProcessDataProps = {
 		{
 			title: "03 | Yellow canna lilies along the house",
 			description:
-				"May 16. Yellow canna lilies, Canna ‘Cannova Yellow’, go in along the house wall, which is just where they show best: massed against a wall, where they stand out. They take the full Mississippi sun, rise two and a half to four feet on large, pointed blue-green leaves, and send up spikes of yellow flowers from spring until the first frost. Hummingbirds and butterflies come to them, and winters here stay mild enough that the roots hold in the ground instead of being lifted and stored.",
+				"May 16. Yellow canna lilies go in along the house wall, which is just where they show best: massed against a wall, where they stand out. They take the full Mississippi sun, rise on large, pointed leaves, and send up spikes of yellow flowers from spring until the first frost. Hummingbirds and butterflies come to them, and winters here stay mild enough that the roots hold in the ground instead of being lifted and stored.",
 		},
 		{
 			title: "04 | Cowrie shells for the ancestors",
@@ -301,15 +301,15 @@ const fieldData: WorksDataProps = {
 		},
 		{
 			image: `${PHOTOS}/IMG_0273.jpg`,
-			name: "AMARANTH",
+			name: "AMONG THE SQUASH",
 			location: "",
-			description: "Red amaranth in bloom among the squash.",
+			description: "Deep red flower spikes standing over broad squash leaves.",
 		},
 		{
 			image: `${PHOTOS}/IMG_2127.jpg`,
 			name: "POPPIES",
 			location: "",
-			description: "California poppies and calendula along a bed.",
+			description: "Orange poppies through a bed.",
 		},
 	],
 };
@@ -417,7 +417,7 @@ const worksData: WorksDataProps = {
 			image: `${PHOTOS}/IMG_1608.jpg`,
 			name: "LETTUCE",
 			location: "",
-			description: "Heads of butter lettuce.",
+			description: "Soft green heads of lettuce, just cut.",
 		},
 		{
 			image: `${PHOTOS}/IMG_2878.jpg`,

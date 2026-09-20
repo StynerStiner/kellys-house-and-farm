@@ -69,28 +69,30 @@ We wrote these from the photos and the story. They should hear Keisha's yes befo
 - **The Garden Now, step 04:** "Here they honor Henry and Rosie Lee Kelly and all who came before." Same question.
 - **An Offering:** "Before the harvest is carried away, some of it goes back… A thank-you to the soil, the rain and the hands that came before." Does that describe what the offering means to Keisha?
 
-### Crop names we guessed from photos
+### Plant names — settled, nothing to ask
 
-- **Sorghum** (harvest slider): the red and gold seed heads could be broomcorn or millet.
-- **Lettuce** (harvest slider): described as "butter lettuce."
-- **Amaranth** and **Poppies** (In the Field): "red amaranth among the squash" and "California poppies and calendula."
-- **Ginger & Bitter Melon** (harvest slider): the photo also shows long beans.
-- **Canna ‘Cannova Yellow’** (The Garden Now, step 03): step 03 now names the cannas as this variety, and the plant facts around it (height, bloom season, blue-green leaves) all describe Cannova Yellow specifically. That came from a gardening site, not from Keisha. If she planted a different yellow canna, the variety name and those details should come out and it goes back to just “yellow canna lilies.”
+These slides used to name plants we'd guessed at from the photos. The copy now
+describes only what is plainly visible, so none of it needs Keisha's confirmation:
+
+- **Sorghum stayed.** The worry was broomcorn or millet, but broomcorn *is* a sorghum,
+  and millet heads are compact and bristly rather than the open red panicles in the
+  photo. Either way “sorghum” is right.
+- “Butter lettuce” is now just lettuce, which is what the photo shows.
+- The red spikes among the squash are described by sight; we don't name them
+  amaranth, because they could equally be celosia.
+- The calendula claim is gone; the poppies stayed, they're unmistakable.
+- Ginger, bitter melon and long beans stayed. All three are clear in the photo.
 
 ### The Garden Now (steps 01–05)
 
 Steps 01, 02 and 05 were filled out from the photos so all five cards read at the same
-weight. Three things in them are inference, not record:
+weight. The one soft spot left:
 
-- **Step 01:** “soil that had rested since Henry and Rosie Lee Kelly last worked it”
-  takes it that nothing was grown in the yard between their passing and this spring.
-  That matches Our Story, but Keisha would know if anything was planted in between.
-- **Step 02 has no date.** Every other card is dated (May 11, 16, 17). Breaking ground
-  falls between the 11th and the 16th, but we don’t know the day, so the card simply
-  doesn’t say. If Keisha remembers it, it’s one line. If not, leaving it undated
-  reads fine.
 - **Step 05:** “Cut the pods young and the plant keeps setting more” is general okra
   growing, not how Keisha picks hers.
+
+Step 02 carries no date on purpose: Keisha doesn’t remember the day. Asked and
+answered, leave it as it is.
 
 Also the land clip caption under the tribute: **“The land they kept · Canton, Mississippi.”**
 
