@@ -75,6 +75,24 @@ We wrote these from the photos and the story. They should hear Keisha's yes befo
 - **Lettuce** (harvest slider): described as "butter lettuce."
 - **Amaranth** and **Poppies** (In the Field): "red amaranth among the squash" and "California poppies and calendula."
 - **Ginger & Bitter Melon** (harvest slider): the photo also shows long beans.
+- **Canna ‘Cannova Yellow’** (The Garden Now, step 03): step 03 now names the cannas as this variety, and the plant facts around it (height, bloom season, blue-green leaves) all describe Cannova Yellow specifically. That came from a gardening site, not from Keisha. If she planted a different yellow canna, the variety name and those details should come out and it goes back to just “yellow canna lilies.”
+
+### The Garden Now (steps 01–05)
+
+Steps 01, 02 and 05 were filled out from the photos so all five cards read at the same
+weight. Three things in them are inference, not record:
+
+- **Step 01:** “soil that had rested since Henry and Rosie Lee Kelly last worked it”
+  takes it that nothing was grown in the yard between their passing and this spring.
+  That matches Our Story, but Keisha would know if anything was planted in between.
+- **Step 02 has no date.** Every other card is dated (May 11, 16, 17). Breaking ground
+  falls between the 11th and the 16th, but we don’t know the day, so the card simply
+  doesn’t say. If Keisha remembers it, it’s one line. If not, leaving it undated
+  reads fine.
+- **Step 05:** “Cut the pods young and the plant keeps setting more” is general okra
+  growing, not how Keisha picks hers.
+
+Also the land clip caption under the tribute: **“The land they kept · Canton, Mississippi.”**
 
 ### Years of Growing pop-out cards
 
