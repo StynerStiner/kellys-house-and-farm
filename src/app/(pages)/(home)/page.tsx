@@ -125,7 +125,7 @@ const workingProcessData: WorkingProcessDataProps = {
 		{
 			title: "03 | Yellow canna lilies along the house",
 			description:
-				"May 16. Yellow canna lilies go in along the house wall, which is just where they show best: massed against a wall, where they stand out. They take the full Mississippi sun, rise on large, pointed leaves, and send up spikes of yellow flowers from spring until the first frost. Hummingbirds and butterflies come to them, and winters here stay mild enough that the roots hold in the ground instead of being lifted and stored.",
+				"May 16. Yellow canna lilies go in along the house wall, which is just where they show best: massed against a wall, where they stand out. They take the full Mississippi sun, rise on broad, paddle-shaped leaves, and send up spikes of yellow flowers from midsummer until the first frost. Hummingbirds and butterflies come to them, and winters here stay mild enough that the roots hold in the ground instead of being lifted and stored.",
 		},
 		{
 			title: "04 | Cowrie shells for the ancestors",
